@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A Última Coisa Que Você Vê Antes de Dormir — R$ 24,90</title>
+    <meta name="description"
+        content="Como a tela antes de dormir sabota sua noite inteira — e o que fazer sem largar o celular. Ebook de entrada por R$ 24,90." />
+    <meta property="og:title" content="A Última Coisa Que Você Vê Antes de Dormir" />
+    <meta property="og:description" content="Tá sabotando sua noite inteira. 5 tópicos diretos por R$ 24,90." />
+    <meta property="og:type" content="product" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --night: #0a0e1f;
+            --night-2: #14192e;
+            --blue: #3d6bff;
+            --ink: #eef1fb;
+            --muted: #9aa3c4;
+            --line: rgba(255, 255, 255, 0.09);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--night);
+            color: var(--ink);
+            font-family: "Manrope", system-ui, sans-serif;
+            font-weight: 300;
+            line-height: 1.72;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.025em;
+        }
+
+        .wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 22px;
+        }
+
+        section {
+            padding: 76px 0;
+        }
+
+        .eyebrow {
+            font-size: 0.7rem;
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            color: #7f9bff;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .lead {
+            color: var(--muted);
+            font-size: 1.05rem;
+            max-width: 58ch;
+        }
+
+        .btn-comprar {
+            display: inline-block;
+            background: var(--blue);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 18px 32px;
+            border-radius: 8px;
+            box-shadow: 0 18px 40px -18px rgba(61, 107, 255, 0.95);
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease;
+        }
+
+        .btn-comprar:hover {
+            background: #5580ff;
+            transform: translateY(-2px);
+        }
+
+        .btn-comprar.lg {
+            font-size: 1.08rem;
+            padding: 21px 42px;
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            min-height: 100svh;
+            display: flex;
+            align-items: center;
+            padding: 110px 0 80px;
+            background:
+                radial-gradient(70% 60% at 76% 22%, rgba(61, 107, 255, 0.22), transparent 62%),
+                linear-gradient(180deg, #0a0e1f 0%, #14192e 100%);
+            overflow: hidden;
+        }
+
+        #stars {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .hero .wrap {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 6.4vw, 4.2rem);
+            max-width: 16ch;
+        }
+
+        .hero h1 span {
+            color: #8aa5ff;
+        }
+
+        .hero .sub {
+            margin-top: 22px;
+            color: #c3cbe8;
+            font-size: clamp(1.02rem, 2.1vw, 1.24rem);
+            max-width: 44ch;
+        }
+
+        .hero-actions {
+            margin-top: 38px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .note {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .glow-phone {
+            position: absolute;
+            right: 6%;
+            bottom: 8%;
+            width: min(230px, 34vw);
+            opacity: 0.55;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* IDENT */
+        .ident {
+            background: var(--night-2);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .ident h2 {
+            font-size: clamp(1.7rem, 4vw, 2.6rem);
+            max-width: 20ch;
+        }
+
+        /* TIMELINE */
+        .tl {
+            margin-top: 42px;
+            list-style: none;
+            border-left: 1px solid rgba(61, 107, 255, 0.4);
+            padding-left: 30px;
+            display: grid;
+            gap: 26px;
+        }
+
+        .tl li {
+            position: relative;
+        }
+
+        .tl li::before {
+            counter-increment: none;
+            content: attr(data-n);
+            position: absolute;
+            left: -46px;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--night);
+            border: 1px solid rgba(61, 107, 255, 0.6);
+            color: #8aa5ff;
+            font-weight: 800;
+            font-size: 0.85rem;
+            display: grid;
+            place-items: center;
+        }
+
+        .tl h3 {
+            font-size: 1.22rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .tl p {
+            color: var(--muted);
+            font-size: 0.97rem;
+            max-width: 58ch;
+        }
+
+        /* DIAGRAMA */
+        .diagram {
+            background: var(--night-2);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .flow {
+            margin-top: 44px;
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            align-items: stretch;
+        }
+
+        .node {
+            background: rgba(61, 107, 255, 0.08);
+            border: 1px solid rgba(61, 107, 255, 0.3);
+            border-radius: 12px;
+            padding: 26px 22px;
+            text-align: center;
+            opacity: 0;
+        }
+
+        .node svg {
+            stroke: #7f9bff;
+            margin-bottom: 12px;
+        }
+
+        .node h4 {
+            font-size: 1.02rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .node p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .flow-bar {
+            margin-top: 22px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .flow-bar i {
+            display: block;
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, #3d6bff, #8aa5ff);
+        }
+
+        .flow-caption {
+            margin-top: 14px;
+            font-size: 0.88rem;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        /* PROMESSA */
+        .promise-inner {
+            max-width: 60ch;
+            border-left: 3px solid var(--blue);
+            padding-left: 26px;
+        }
+
+        .promise-inner h2 {
+            font-size: clamp(1.5rem, 3.4vw, 2.1rem);
+            margin-bottom: 14px;
+        }
+
+        /* CTA */
+        .cta {
+            text-align: center;
+            background:
+                radial-gradient(80% 80% at 50% 0%, rgba(61, 107, 255, 0.2), transparent 65%),
+                var(--night);
+        }
+
+        .cta h2 {
+            font-size: clamp(1.8rem, 4.4vw, 2.8rem);
+            max-width: 18ch;
+            margin: 0 auto;
+        }
+
+        .cta .lead {
+            margin: 18px auto 0;
+        }
+
+        .price {
+            margin: 32px 0 24px;
+            font-size: clamp(2.6rem, 7vw, 3.6rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            color: #fff;
+        }
+
+        .price small {
+            display: block;
+            font-size: 0.74rem;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-weight: 400;
+            margin-bottom: 6px;
+        }
+
+        footer {
+            padding: 32px 0;
+            border-top: 1px solid var(--line);
+            color: #737d9c;
+            font-size: 0.82rem;
+        }
+
+        footer .wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: space-between;
+        }
+
+        .reveal {
+            opacity: 0;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .reveal,
+            .node {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            section {
+                padding: 58px 0;
+            }
+
+            .btn-comprar {
+                width: 100%;
+                text-align: center;
+            }
+
+            .glow-phone {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero">
+        <canvas id="stars"></canvas>
+        <svg class="glow-phone" viewBox="0 0 140 250" fill="none" aria-hidden="true">
+            <rect x="12" y="10" width="116" height="230" rx="20" stroke="rgba(255,255,255,.18)" />
+            <rect x="20" y="22" width="100" height="206" rx="14" fill="rgba(61,107,255,.35)" />
+            <rect x="20" y="22" width="100" height="206" rx="14" fill="url(#g)" />
+            <defs>
+                <radialGradient id="g" cx="50%" cy="30%" r="70%">
+                    <stop offset="0%" stop-color="#8aa5ff" stop-opacity=".65" />
+                    <stop offset="100%" stop-color="#3d6bff" stop-opacity="0" />
+                </radialGradient>
+            </defs>
+        </svg>
+        <div class="wrap">
+            <p class="eyebrow reveal">Ebook de entrada · 5 tópicos</p>
+            <h1 class="reveal">A Última Coisa Que Você Vê Antes de Dormir <span>Tá Sabotando Sua Noite Inteira</span>
+            </h1>
+            <p class="sub reveal">
+                Não é só sobre demorar pra pegar no sono. É sobre a qualidade das oito horas que vêm
+                depois.
+            </p>
+            <div class="hero-actions reveal">
+                <a href="#" class="btn-comprar">Quero Dormir Melhor Hoje — R$ 24,90</a>
+                <span class="note">Leitura curta · aplicável esta noite</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="ident">
+        <div class="wrap">
+            <p class="eyebrow reveal">Você conhece essa</p>
+            <h2 class="reveal">"Só mais 5 minutos de celular" — e uma hora depois você ainda está lá</h2>
+            <p class="lead reveal" style="margin-top: 18px">
+                Apaga a luz, deita, pega o telefone pra "desligar a cabeça". Quando percebe, é 1h30, os
+                olhos ardem e o sono foi embora. No dia seguinte você acorda como se não tivesse dormido —
+                mesmo tendo ficado sete horas na cama.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <p class="eyebrow reveal">O que tem dentro</p>
+            <h2 class="reveal" style="font-size: clamp(1.7rem, 4vw, 2.6rem)">Os 5 tópicos</h2>
+            <ul class="tl">
+                <li data-n="1" class="reveal">
+                    <h3>O que a tela faz com o seu relógio interno</h3>
+                    <p>Por que o corpo entende luz de celular como "ainda é dia" — e atrasa tudo a partir daí.</p>
+                </li>
+                <li data-n="2" class="reveal">
+                    <h3>Não é só a luz: é o conteúdo</h3>
+                    <p>Rolar feed ativa o cérebro de um jeito que nenhum modo noturno resolve.</p>
+                </li>
+                <li data-n="3" class="reveal">
+                    <h3>A janela de 60 minutos que decide a noite</h3>
+                    <p>O que fazer no intervalo antes de deitar, sem precisar abrir mão do celular.</p>
+                </li>
+                <li data-n="4" class="reveal">
+                    <h3>Ajustes de ambiente que custam zero</h3>
+                    <p>Temperatura, luz do quarto e posição do carregador — pequenos, mas somam.</p>
+                </li>
+                <li data-n="5" class="reveal">
+                    <h3>Como salvar a noite quando você já passou do ponto</h3>
+                    <p>Plano de contenção pras vezes em que já é tarde e você percebeu tarde demais.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="diagram">
+        <div class="wrap">
+            <p class="eyebrow reveal">Em três passos</p>
+            <h2 class="reveal" style="font-size: clamp(1.6rem, 3.8vw, 2.4rem)">Como a luz azul atrasa seu sono</h2>
+            <div class="flow" id="flow">
+                <div class="node">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+                        <rect x="6" y="2.5" width="12" height="19" rx="3" />
+                        <path d="M10.5 18.5h3" stroke-linecap="round" />
+                    </svg>
+                    <h4>1. Tela na cara</h4>
+                    <p>Luz de alta intensidade a 30 cm dos olhos, no horário em que deveria estar escuro.</p>
+                </div>
+                <div class="node">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+                        <path d="M20 14.5A8.2 8.2 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z" stroke-linejoin="round" />
+                        <path d="M15 4.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8L12.5 7l1.8-.7z" />
+                    </svg>
+                    <h4>2. Melatonina segurada</h4>
+                    <p>O hormônio que abre a porta do sono só começa a subir depois — se subir direito.</p>
+                </div>
+                <div class="node">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M12 7.5V12l3.2 2" stroke-linecap="round" />
+                    </svg>
+                    <h4>3. Relógio biológico atrasado</h4>
+                    <p>Você pega no sono mais tarde, acorda no mesmo horário e acumula o déficit todo dia.</p>
+                </div>
+            </div>
+            <div class="flow-bar"><i id="flowBar"></i></div>
+            <p class="flow-caption">O atraso não some de manhã — ele se acumula ao longo da semana.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <div class="promise-inner reveal">
+                <h2>Esse ebook não vai te mandar largar o celular</h2>
+                <p class="lead">
+                    Ninguém vai fazer isso, e fingir que vai só gera culpa. O que existe aqui são ajustes
+                    realistas de horário, luz e conteúdo — feitos pra quem vai continuar usando o telefone à
+                    noite.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="wrap">
+            <h2 class="reveal">Custa menos que dois cafés e começa a valer hoje à noite</h2>
+            <p class="lead reveal">
+                É o ebook de entrada da coleção: curto, direto e sem enrolação. Se você só quer resolver a
+                parte da noite, comece por aqui.
+            </p>
+            <div class="price reveal"><small>Ebook de entrada</small>R$ 24,90</div>
+            <a href="#" class="btn-comprar lg reveal">Quero Dormir Melhor Hoje — R$ 24,90</a>
+            <p class="note" style="margin-top: 22px">Conteúdo informativo. Insônia persistente merece avaliação
+                profissional.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <span>A Última Coisa Que Você Vê Antes de Dormir</span>
+            <span>© <span id="y"></span> — Todos os direitos reservados</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script>
+        document.getElementById("y").textContent = new Date().getFullYear();
+        const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        /* estrelas leves em canvas */
+        (function stars() {
+            const c = document.getElementById("stars");
+            if (!c || reduced) return;
+            const ctx = c.getContext("2d");
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            let w, h, pts;
+            const count = window.innerWidth < 720 ? 42 : 90;
+            function setup() {
+                w = c.clientWidth;
+                h = c.clientHeight;
+                c.width = w * dpr;
+                c.height = h * dpr;
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                pts = Array.from({ length: count }, () => ({
+                    x: Math.random() * w,
+                    y: Math.random() * h,
+                    r: Math.random() * 1.3 + 0.3,
+                    a: Math.random() * 0.5 + 0.2,
+                    s: Math.random() * 0.012 + 0.004,
+                    p: Math.random() * Math.PI * 2,
+                    d: Math.random() * 0.6 + 0.4,
+                }));
+            }
+            setup();
+            window.addEventListener("resize", setup);
+            let off = 0;
+            window.addEventListener(
+                "scroll",
+                () => {
+                    off = window.scrollY;
+                },
+                { passive: true }
+            );
+            (function draw() {
+                ctx.clearRect(0, 0, w, h);
+                for (const p of pts) {
+                    p.p += p.s;
+                    const y = p.y - off * 0.12 * p.d;
+                    if (y < -5 || y > h + 5) continue;
+                    ctx.globalAlpha = p.a * (0.55 + 0.45 * Math.sin(p.p));
+                    ctx.fillStyle = "#cfd8ff";
+                    ctx.beginPath();
+                    ctx.arc(p.x, y, p.r, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                ctx.globalAlpha = 1;
+                requestAnimationFrame(draw);
+            })();
+        })();
+
+        if (window.gsap && !reduced) {
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.set(".reveal", { opacity: 0, y: 24 });
+            gsap.to(".hero .reveal", { opacity: 1, y: 0, duration: 0.9, ease: "power3.out", stagger: 0.1 });
+            gsap.utils.toArray("section").forEach((sec) => {
+                const items = sec.querySelectorAll(".reveal");
+                if (items.length)
+                    gsap.to(items, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        ease: "power2.out",
+                        stagger: 0.1,
+                        scrollTrigger: { trigger: sec, start: "top 80%" },
+                    });
+            });
+            gsap
+                .timeline({ scrollTrigger: { trigger: "#flow", start: "top 78%" } })
+                .from(".node", { opacity: 0, y: 26, duration: 0.55, stagger: 0.35, ease: "power2.out" })
+                .set(".node", { opacity: 1, clearProps: "transform" })
+                .to("#flowBar", { width: "100%", duration: 1.1, ease: "power1.inOut" }, "-=0.6");
+        } else {
+            document.querySelectorAll(".reveal, .node").forEach((el) => (el.style.opacity = 1));
+            document.getElementById("flowBar").style.width = "100%";
+        }
+    </script>
+</body>
+
+</html>
